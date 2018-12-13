@@ -29,25 +29,4 @@ namespace ConsoleApp
             Console.ReadKey();
         }
     }
-
-    public class MyJobListen : IJobListener
-    {
-        //public string Name => throw new NotImplementedException();
-        public string Name => "hello";
-
-        public void JobExecutionVetoed(IJobExecutionContext context)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void JobToBeExecuted(IJobExecutionContext context)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void JobWasExecuted(IJobExecutionContext context, JobExecutionException jobException)
-        {
-            throw new NotImplementedException();
-        }
-    }
 }
