@@ -1,4 +1,5 @@
-﻿using Quartz;
+﻿using MyQuartz.MyTest;
+using Quartz;
 using Quartz.Impl;
 using System;
 using System.Collections.Generic;
@@ -14,16 +15,10 @@ namespace ConsoleApp
         {
             Console.WriteLine("start");
 
-            //Scheduler 调度
-            IScheduler scheduler = StdSchedulerFactory.GetDefaultScheduler();
-            scheduler.Start();
-            //job 作业任务
-            var job = JobBuilder.Create<HelloJob>().Build();
 
-            //tigger 出发
-            var trigger = TriggerBuilder.Create().WithSimpleSchedule(x=>x.WithIntervalInSeconds(2).RepeatForever()).Build();
+            Test test = new Test();
+            test.start();
 
-            scheduler.ScheduleJob(job, trigger);
 
             Console.WriteLine("end");
             Console.ReadKey();

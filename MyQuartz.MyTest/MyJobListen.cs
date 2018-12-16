@@ -5,26 +5,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp
+namespace MyQuartz.MyTest
 {
+
     //监听任务
     public class MyJobListen : IJobListener
     {
-        public string Name => throw new NotImplementedException();
+        public string Name => "hello world listening...";
 
         public void JobExecutionVetoed(IJobExecutionContext context)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("JobExecutionVetoed:被否决执行了");
+            //throw new NotImplementedException();
         }
 
         public void JobToBeExecuted(IJobExecutionContext context)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("JobToBeExecuted:开始执行的监听");
+            //throw new NotImplementedException();
         }
 
         public void JobWasExecuted(IJobExecutionContext context, JobExecutionException jobException)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("JobWasExecuted:结束执行的监听\n");
+            //throw new NotImplementedException();
         }
+
     }
 }

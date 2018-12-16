@@ -1,7 +1,7 @@
 ﻿using Quartz;
 using System;
 
-namespace ConsoleApp
+namespace MyQuartz.MyTest
 {
     public class HelloJob : IJob
     {
